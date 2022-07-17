@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="27.435">
+    <testcase classname="Register | users could register with new accounts" name="user could register with valid account" time="26.369">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name...................................................passed
+And user enter last name....................................................passed
+And user enter date.........................................................passed
+And user enter email........................................................passed
+And user fills Password fields..............................................passed
+Then user clicks on register button.........................................passed
+And success message is displayed............................................undefined
+]]>
+        </failure>
+    </testcase>
+</testsuite>
