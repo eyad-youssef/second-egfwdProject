@@ -5,3 +5,4 @@
       When user logs in
 
       Then user clicks on the needed currency
+      And checks that all currencies successfully changed

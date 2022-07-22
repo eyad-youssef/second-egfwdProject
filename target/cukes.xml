@@ -1,16 +1,298 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="27.435">
-    <testcase classname="Register | users could register with new accounts" name="user could register with valid account" time="26.369">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given user go to register page..............................................passed
-When user select gender type................................................passed
-And user enter first name...................................................passed
-And user enter last name....................................................passed
-And user enter date.........................................................passed
-And user enter email........................................................passed
-And user fills Password fields..............................................passed
-Then user clicks on register button.........................................passed
-And success message is displayed............................................undefined
+<testsuite errors="0" failures="7" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="567.625">
+    <testcase classname="Adding items to compare list" name="user could add different products to compare list" time="45.909">
+        <system-out>
+            <![CDATA[Given user logged in first..................................................passed
+When user get a product.....................................................passed
+Then user finalises adding product to comparelist...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="add items to the shopping cart" name="user could add different products to Shopping cart" time="60.518">
+        <system-out>
+            <![CDATA[Given user has logged in....................................................passed
+When user chooses a product.................................................passed
+And user adds to cart.......................................................passed
+And user adds product details...............................................passed
+Then user finalises adding product..........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="add items to wishlist" name="user could add different products to Wishlist" time="42.91">
+        <system-out>
+            <![CDATA[Given user has loggedin.....................................................passed
+When user choose a product..................................................passed
+And user adds to wishlist...................................................passed
+And user add product details................................................passed
+Then user finalises adding product to wishlist..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="user changes currency" name="Logged User could switch between currencies US-Euro" time="34.408">
+        <system-out>
+            <![CDATA[Given user goes to login page first.........................................passed
+When user logs in...........................................................passed
+Then user clicks on the needed currency.....................................passed
+And checks that all currencies successfully changed.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="filter products by their color" name="user could filter with color" time="26.892">
+        <system-out>
+            <![CDATA[Given user  is logged.......................................................passed
+When user chooses product...................................................passed
+Then user select the color..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="41.405">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico-login&quot;}&#10;  (Session info: chrome=103.0.5060.134)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [942554f8cba9600cbed81d7b0b60d934, findElement {using=css selector, value=.ico-login}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60596/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 942554f8cba9600cbed81d7b0b60d934" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given user go to login page.................................................failed
+When user enters email......................................................skipped
+And user enter password.....................................................skipped
+Then user click the login button............................................skipped
+And user login to the system successfully...................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".ico-login"}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [942554f8cba9600cbed81d7b0b60d934, findElement {using=css selector, value=.ico-login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60596/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 942554f8cba9600cbed81d7b0b60d934
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.example.pages.LoginPage.clickLoginButton1(LoginPage.java:15)
+	at org.example.Definitions.LoginStepDefinition.going_toLoginPage(LoginStepDefinition.java:16)
+	at ✽.user go to login page(file:///C:/Users/20114/OneDrive/Documents/First_cucmber_project/src/main/resources/features/Login.feature:5)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="making an order" name="user could Create successful Order" time="62.741">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico-login&quot;}&#10;  (Session info: chrome=103.0.5060.134)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [372afa1786e805466b5b2feae97e0c9c, findElement {using=css selector, value=.ico-login}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60707}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60707/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 372afa1786e805466b5b2feae97e0c9c" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given user has been logged in...............................................failed
+And user adds product to cart...............................................skipped
+And user has a product......................................................skipped
+And user checks out product.................................................skipped
+When user add address details...............................................skipped
+And user add shipping details...............................................skipped
+And user addes payment details..............................................skipped
+Then user confirms operation................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".ico-login"}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [372afa1786e805466b5b2feae97e0c9c, findElement {using=css selector, value=.ico-login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60707}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60707/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 372afa1786e805466b5b2feae97e0c9c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.example.pages.MakeOrderPage.clickLoginButton8(MakeOrderPage.java:14)
+	at org.example.Definitions.MakeOrderStepDefinition.first_Login(MakeOrderStepDefinition.java:12)
+	at ✽.user has been logged in(file:///C:/Users/20114/OneDrive/Documents/First_cucmber_project/src/main/resources/features/MakeOrder.feature:4)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Login | users could register with new accounts" name="user could register with valid account" time="11.848">
+        <failure message="unknown error: cannot determine loading status&#10;from disconnected: unable to send message to renderer&#10;  (Session info: chrome=103.0.5060.134)&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [62aa4b2e15ec6922fe9a223c258a6da8, get {url=https://demo.nopcommerce.com/}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60886}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60886/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 62aa4b2e15ec6922fe9a223c258a6da8" type="org.openqa.selenium.WebDriverException">
+            <![CDATA[Given user go to register page..............................................skipped
+When user select gender type................................................skipped
+And user enter first name...................................................skipped
+And user enter last name....................................................skipped
+And user enter date.........................................................skipped
+And user enter email........................................................skipped
+And user fills Password fields..............................................skipped
+Then user clicks on register button.........................................skipped
+And success message is displayed............................................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [62aa4b2e15ec6922fe9a223c258a6da8, get {url=https://demo.nopcommerce.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60886}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60886/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 62aa4b2e15ec6922fe9a223c258a6da8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at org.example.Definitions.Setup.setup(Setup.java:32)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="ResetPassword |  User could reset password successfully" name="user could reset password with valid account" time="44.801">
+        <failure message="Unable to find element with locator By.cssSelector: .forgot-password &gt; a:nth-child(1)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given user go to forget password page.......................................failed
+When user reenter email.....................................................skipped
+Then user clicks recover button.............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.cssSelector: .forgot-password > a:nth-child(1)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.example.pages.ResetPasswordPage.click_Forget_Password(ResetPasswordPage.java:16)
+	at org.example.Definitions.ResetPasswordDefinition.clicking_ForgetPassword(ResetPasswordDefinition.java:12)
+	at ✽.user go to forget password page(file:///C:/Users/20114/OneDrive/Documents/First_cucmber_project/src/main/resources/features/ResetPassword.feature:4)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Search | Logged User could search for any product" name="user could search any product after logining in" time="44.851">
+        <failure message="Unable to find element with locator By.cssSelector: .ico-login&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given user goes to login page...............................................failed
+And user enters email again.................................................skipped
+And user enters password....................................................skipped
+And user clicks login button................................................skipped
+When user enter any product in search bar...................................skipped
+Then user clicks the search button..........................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.cssSelector: .ico-login
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.example.pages.SearchInhomePage.clickLoginButton(SearchInhomePage.java:18)
+	at org.example.Definitions.SearchDefinition.click_login(SearchDefinition.java:20)
+	at ✽.user goes to login page(file:///C:/Users/20114/OneDrive/Documents/First_cucmber_project/src/main/resources/features/Search.feature:4)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Search | Logged User could search for any product" name="user could search any product after logining in 2" time="50.142">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico-login&quot;}&#10;  (Session info: chrome=103.0.5060.134)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [f8a792904521437f2e6c1f4b74fda008, findElement {using=css selector, value=.ico-login}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61127}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61127/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: f8a792904521437f2e6c1f4b74fda008" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given user goes to login page...............................................failed
+And user enters email again.................................................skipped
+And user enters password....................................................skipped
+And user clicks login button................................................skipped
+Then user chooses from the search list......................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".ico-login"}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f8a792904521437f2e6c1f4b74fda008, findElement {using=css selector, value=.ico-login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61127}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61127/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f8a792904521437f2e6c1f4b74fda008
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.example.pages.SearchInhomePage.clickLoginButton(SearchInhomePage.java:18)
+	at org.example.Definitions.SearchDefinition.click_login(SearchDefinition.java:20)
+	at ✽.user goes to login page(file:///C:/Users/20114/OneDrive/Documents/First_cucmber_project/src/main/resources/features/Search.feature:17)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="user changes categories" name="user could select different Categories" time="58.86">
+        <system-out>
+            <![CDATA[Given user is in the loginpage first........................................passed
+And user puts login details.................................................passed
+When user hovers over one category..........................................passed
+Then user hovers over another category......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="get tags on the product" name="user could select different tags" time="37.452">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico-login&quot;}&#10;  (Session info: chrome=103.0.5060.134)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [1a940187b03b568e40f81eaee3eddf98, findElement {using=css selector, value=.ico-login}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61324}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61324/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 1a940187b03b568e40f81eaee3eddf98" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given user logged in........................................................failed
+When user get product.......................................................skipped
+Then user set a tag.........................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".ico-login"}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-SG38K1F', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1a940187b03b568e40f81eaee3eddf98, findElement {using=css selector, value=.ico-login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\20114\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61324}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61324/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a940187b03b568e40f81eaee3eddf98
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.example.pages.SelectTagPage.clickLoginButton5(SelectTagPage.java:12)
+	at org.example.Definitions.SelectTagsStepDefinition.logging(SelectTagsStepDefinition.java:11)
+	at ✽.user logged in(file:///C:/Users/20114/OneDrive/Documents/First_cucmber_project/src/main/resources/features/SelectTags.feature:4)
 ]]>
         </failure>
     </testcase>

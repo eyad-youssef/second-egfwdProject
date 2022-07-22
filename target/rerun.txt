@@ -1,1 +1,6 @@
+file:src/main/resources/features/ResetPassword.feature:3
+file:src/main/resources/features/MakeOrder.feature:3
+file:src/main/resources/features/Search.feature:3:16
 file:src/main/resources/features/Register.feature:4
+file:src/main/resources/features/Login.feature:4
+file:src/main/resources/features/SelectTags.feature:3

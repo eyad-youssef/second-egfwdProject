@@ -5,8 +5,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.ChangeCurrencyPage;
+import static org.testng.Assert.*;
 
 public class ChangeCurrencyStepDefinition extends ChangeCurrencyPage {
+
+
     @Given("user goes to login page first")
     public void gettinglogged(){
         clickLoginButton3().click();
@@ -26,4 +29,14 @@ public class ChangeCurrencyStepDefinition extends ChangeCurrencyPage {
         selectCurrency2();
         selectCurrency();
     }
+    @And("checks that all currencies successfully changed")
+    public void checkallitems(){
+
+        //assertTrue(,check(),"the currency isn't euro ");
+        check();
+    }
+
+
+
+
 }

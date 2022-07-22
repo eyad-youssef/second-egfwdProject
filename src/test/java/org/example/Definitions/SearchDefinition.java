@@ -6,8 +6,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.SearchInhomePage;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import javax.annotation.processing.Generated;
+import java.time.Duration;
+
+import static org.testng.Assert.*;
 
 public class SearchDefinition extends SearchInhomePage {
 
@@ -44,6 +48,17 @@ public void entering_Search(){
 
    }
 
+  @And("user chooses from the search list")
+    public  void choose() throws InterruptedException {
+    getsearchbar().sendKeys("AP_MBP_13");
+      WebDriverWait wait = new WebDriverWait(Setup.d, Duration.ofSeconds(10));
+
+      getlistofproducts();
+       String sku = getthesku().getText();
+      assertEquals("AP_MBP_13",sku,"THIS IS NOT THE DESIRED PRODUCT");
+
+
+  }
 
 
 
