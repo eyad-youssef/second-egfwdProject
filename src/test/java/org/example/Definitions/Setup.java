@@ -34,12 +34,12 @@ public class Setup {
 
 
     }
-//    @After
-//    public void  end() throws InterruptedException {
-//        d.quit();
-//        Thread.sleep(3000);
-//    }
-//
+    @After
+    public void  end() throws InterruptedException {
+        d.quit();
+        Thread.sleep(3000);
+    }
+
 
     }
 
